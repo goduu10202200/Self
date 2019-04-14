@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="./static/monster.png" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- CSS - tocas.2.3.3-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css"
+    />
+    <!-- JS - Voice -->
+    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <title>M.V.W</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <br />
+    <br />
+
+    <div class="four wide computer three wide mobile column">
+      <h3 class="ts center aligned icon header">
+        <i><img style="width:10%" src="./static/monster.png"/></i>製作中 -
+        玩一下
+        <div class="sub header">為你的女朋友，喔不，你沒有女朋友。</div>
+      </h3>
+      <canvas id="canvas" style="margin-top: -17vh"></canvas>
+    </div>
+    <style>
+      .bar {
+        margin-top: -7vh !important;
+        height: 20vw;
+      }
+      .menu_button {
+        position: absolute;
+        top: 3vh;
+        left: -13vw;
+        font-size: 2.5em;
+        z-index: 1;
+      }
+      .menu_img {
+        width: 7%;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      @media (max-width: 768px) {
+        .bar {
+          margin-top: -7vh !important;
+        }
+        .menu_button {
+          position: absolute;
+          top: -3vh;
+          left: -57vw;
+          font-size: 2.5em;
+          z-index: 1;
+        }
+        .menu_img {
+          width: 5%;
+        }
+      }
+      @media (max-width: 320px) {
+        .bar {
+          margin-top: -9vh !important;
+        }
+        .menu_button {
+          position: absolute;
+          top: -3vh;
+          left: -70vw;
+          font-size: 2.5em;
+          z-index: 1;
+        }
+        .menu_img {
+          width: 5%;
+        }
+      }
+    </style>
+  </body>
+</html>
