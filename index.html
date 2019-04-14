@@ -16,9 +16,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css"
     />
-    <!-- JS - Voice -->
-    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <title>ZHI-YOU CHEN（陳致佑）</title>
   </head>
   <body>
@@ -32,58 +29,62 @@
         <i><img style="width:10%" src="./assets/icon/monster.png"/></i>製作中...
         <!-- <div class="sub header">為你的女朋友，喔不，你沒有女朋友。</div> -->
       </h3>
-      <canvas id="canvas" style="margin-top: -17vh"></canvas>
     </div>
-    <style>
-      .bar {
-        margin-top: -7vh !important;
-        height: 20vw;
-      }
-      .menu_button {
-        position: absolute;
-        top: 3vh;
-        left: -13vw;
-        font-size: 2.5em;
-        z-index: 1;
-      }
-      .menu_img {
-        width: 7%;
-      }
-      canvas {
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
-      @media (max-width: 768px) {
-        .bar {
-          margin-top: -7vh !important;
+    <canvas id="draw" width="400" height="320"></canvas>
+    <script>
+      const canvas = document.querySelector('#draw')
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+      const ctx = canvas.getContext('2d')
+
+      ctx.strokeStyle = '#BADA55'
+      ctx.lineJoin = 'round'
+      ctx.lineCap = 'round'
+      ctx.lineWidth = 20
+
+      let isDrawing = false
+      let lastX = 0
+      let lastY = 0
+      let hue = 0
+      let direction = true
+
+      function draw(e) {
+        if (!isDrawing) return
+        console.log(e)
+        ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`
+
+        ctx.beginPath()
+        ctx.moveTo(lastX, lastY)
+
+        ctx.lineTo(e.offsetX, e.offsetY)
+        ctx.stroke()
+
+        // ES6 Destructuring Assignment
+        ;[lastX, lastY] = [e.offsetX, e.offsetY]
+
+        hue++
+        if (hue >= 360) {
+          hue = 0
         }
-        .menu_button {
-          position: absolute;
-          top: -3vh;
-          left: -57vw;
-          font-size: 2.5em;
-          z-index: 1;
+
+        if (direction) {
+          ctx.lineWidth++
+        } else {
+          ctx.lineWidth--
         }
-        .menu_img {
-          width: 5%;
-        }
-      }
-      @media (max-width: 320px) {
-        .bar {
-          margin-top: -9vh !important;
-        }
-        .menu_button {
-          position: absolute;
-          top: -3vh;
-          left: -70vw;
-          font-size: 2.5em;
-          z-index: 1;
-        }
-        .menu_img {
-          width: 5%;
+        if (ctx.lineWidth >= 50 || ctx.lineWidth <= 10) {
+          direction = !direction
         }
       }
-    </style>
+
+      canvas.addEventListener('mousedown', e => {
+        isDrawing = true
+        // ES6 Destructuring Assignment
+        ;[lastX, lastY] = [e.offsetX, e.offsetY]
+      })
+      canvas.addEventListener('mousemove', draw)
+      canvas.addEventListener('mouseup', () => (isDrawing = false))
+      canvas.addEventListener('mouseout', () => (isDrawing = false))
+    </script>
   </body>
 </html>
