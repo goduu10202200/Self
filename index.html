@@ -58,6 +58,11 @@
       <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+      .award_text {
+        margin-left: 1vw;
+      }
+    </style>
   </head>
 
   <body>
@@ -168,6 +173,23 @@
           <div class="col-sm-11">
             <h3>Education</h3>
 
+            <!-- 中原大學資訊管理學系 - 碩士 - S -->
+            <div class="row">
+              <div class="col-md-9">
+                <h4>中原大學資訊管理學系 - 碩士</h4>
+                <p class="sub">
+                  <a href="http://www.im.cycu.edu.tw/wSite/mp?mp=5400"
+                    >Chung Yuan Information Management</a
+                  >
+                </p>
+              </div>
+              <div class="year col-md-3">
+                <p>2019 - Present</p>
+              </div>
+            </div>
+            <!-- 中原大學資訊管理學系 - 學士 - E -->
+            <hr />
+            <!-- 中原大學資訊管理學系 - 學士 - S -->
             <div class="row">
               <div class="col-md-9">
                 <h4>中原大學資訊管理學系 - 學士</h4>
@@ -178,10 +200,11 @@
                 </p>
               </div>
               <div class="year col-md-3">
-                <p>2015-2019</p>
+                <p>2015 - 2019</p>
               </div>
             </div>
-            <!--Education & Certification 1 end-->
+            <!-- 中原大學資訊管理學系 - 學士 - E -->
+
             <hr />
 
             <div class="row">
@@ -190,7 +213,7 @@
               </div>
 
               <div class="year col-md-3">
-                <p>2012-2015</p>
+                <p>2012 - 2015</p>
               </div>
             </div>
             <!--Education & Certification 3 end-->
@@ -221,7 +244,7 @@
                 </p>
               </div>
               <div class="year col-md-3">
-                <p>2018 - present</p>
+                <p>2018 - Present</p>
               </div>
             </div>
             <!--Job 1 end-->
@@ -269,9 +292,42 @@
           <div class="col-sm-1">
             <span class="secicon fa fa-laptop"></span>
           </div>
-          <!--icon end-->
           <div class="col-sm-11">
             <h3>Project</h3>
+
+            <!-- 國際商學學士學位學程 -S -->
+            <div class="row">
+              <div class="col-md-8">
+                <h4>中原大學國際商學學士學位學程 - IUBM</h4>
+                <p class="sub">
+                  <a href="https://wp.cycu.edu.tw/iubm/" target="_blank">
+                    <h4>IUBM</h4>
+                  </a>
+                </p>
+              </div>
+              <div class="year col-md-4">
+                <p>Jun 2019 - Jul 2019</p>
+              </div>
+            </div>
+            <!-- 國際商學學士學位學程 -E -->
+            <hr />
+            <!-- 商學院學士學位學程 -S -->
+            <div class="row">
+              <div class="col-md-8">
+                <h4>中原大學商學院學士學位學程 - UBM</h4>
+                <p class="sub">
+                  <a href="https://wp.cycu.edu.tw/ubm/" target="_blank">
+                    <h4>UBM</h4>
+                  </a>
+                </p>
+              </div>
+              <div class="year col-md-4">
+                <p>Jun 2019 - Jul 2019</p>
+              </div>
+            </div>
+            <!-- 商學院學士學位學程 -E -->
+            <hr />
+            <!-- 修課狀況調整平台 -S -->
             <div class="row">
               <div class="col-md-8">
                 <h4>程修課狀況調查平台</h4>
@@ -285,7 +341,9 @@
                 <p>Jul 2018 - Aug 2018</p>
               </div>
             </div>
+            <!-- 修課狀況調整平台 -E -->
           </div>
+
           <!--Project experiences end-->
         </div>
         <!--Project experiences end-->
@@ -408,25 +466,105 @@
           <div class="col-sm-11 col-md-12 ">
             <h3>Awards</h3>
 
-            <div class="award">
-              <h4>創新創業競賽 - 第三名 &nbsp; 2019</h4>
-            </div>
-            <div class="award">
-              <h4>經濟部搶鮮大賽 - 第三名 &nbsp; 2018</h4>
-            </div>
-            <div class="award">
-              <h4>全國資訊應用競賽 - 第三名 &nbsp; 2018</h4>
-            </div>
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      <h4>2019</h4>
+                    </button>
+                  </h5>
+                </div>
 
-            <div class="award">
-              <h4>畢業專題初賽 - 第一名 &nbsp; 2017</h4>
+                <div
+                  id="collapseOne"
+                  class="collapse"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body award_text">
+                    <div class="award">
+                      <h4>創新創業競賽 - 第三名</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      <h4>2018</h4>
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body award_text">
+                    <div class="award">
+                      <h4>經濟部搶鮮大賽 - 第三名</h4>
+                    </div>
+                    <div class="award">
+                      <h4>全國資訊應用競賽 - 第三名</h4>
+                    </div>
+                    <div class="award">
+                      <h4>新創事業團隊競賽 - 第二名</h4>
+                    </div>
+                    <div class="award">
+                      <h4>中原資管專題競賽 - 海報設計獎</h4>
+                    </div>
+                    <div class="award">
+                      <h4>中原資管專題競賽 - 海報人氣獎</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      <h4>2017</h4>
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="collapse"
+                  aria-labelledby="headingThree"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body award_text">
+                    <div class="award">
+                      <h4>畢業專題初賽 - 第一名</h4>
+                    </div>
+                    <div class="award">
+                      <h4>系統分析與設計 - 第二名</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!--1st award end-->
-
-            <div class="award">
-              <h4>系統分析與設計 - 第二名 &nbsp; 2017</h4>
-            </div>
-            <!--1st award end-->
           </div>
           <!--awards end-->
         </div>
